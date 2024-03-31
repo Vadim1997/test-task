@@ -13,7 +13,7 @@ function createProduct(productsArray) {
         title.className = 'products-container__product__title';
         descriptionProduct.className = 'products-container__product__description';
         descriptionProduct.textContent = product.description;
-        // price.textContent = product.price;
+        price.textContent = product.price;
         productWrapper.className = 'products-container__product';
         const imgProduct = document.createElement('img');
         imgProduct.className = 'products-container__product__img ';
