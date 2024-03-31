@@ -15,15 +15,15 @@ function createProduct(productsArray) {
         descriptionProduct.textContent = product.description;
         price.textContent = product.price;
         productWrapper.className = 'products-container__product';
-        product.images.forEach(imageUrl => {
-            const imgElement = document.createElement('img');
-            imgElement.src = imageUrl;
-            imgElement.onerror = function() {
-                imgElement.src = 'https://placehold.co/600x400';
+        const imgProduct = document.createElement('img');
+        imgProduct.className = 'products-container__product__img ';
+        const firsImageUrl = product.images[0];
+        imgProduct.src = firsImageUrl;
+           imgProduct.onerror = function() {
+                imgProduct.src = 'https://placehold.co/600x400';
             }
-            productWrapper.appendChild(imgElement);
-          });
         productsContainerEL.append(productWrapper);
+        productWrapper.append(imgProduct);
         productWrapper.append(title);
         productWrapper.append(descriptionProduct);
         productWrapper.append(price);
